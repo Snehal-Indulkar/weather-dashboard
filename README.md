@@ -26,22 +26,28 @@ A simple, responsive weather dashboard application that allows users to search f
 
 ## Setup Instructions
 
+### Prerequisites
+To run this project locally, ensure you have the following installed:
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+
 1. Clone the repository:
-git clone https://github.com/your-username/weather-dashboard.git
+- git clone https://github.com/your-username/weather-dashboard.git
 
 2. Navigate to the project directory:
-cd weather-dashboard
+- cd weather-dashboard
 
 3. Install the required dependencies:
-npm install
+- npm install
 
-4. Create a .env file in the root of the project and add your OpenWeatherMap API key:
-API_KEY=your_openweathermap_api_key
+4. Create an account at OpenWeatherMap and generate an API key.
+   Create a .env file in the root of the project and add your OpenWeatherMap API key:
+- API_KEY=your_openweathermap_api_key
 
-5. Start the server:
-npm start
+6. Start the server:
+- npm start
 
-6. Open your browser and go to http://localhost:3000 to view the application.
+7. Open your browser and go to http://localhost:3000 to view the application.
 
 ## API Documentation
 
