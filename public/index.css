@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Roboto", serif
+}
+
+body {
+    background: url('images/background.jpg');
+    width: 100%;
+    height: 100dvh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background: rgb(0,0,0,0.15);
+    backdrop-filter: blur(15px);
+}
+.container {
+    padding: 20px;
+    width: 300px;
+    height: 500px;
+    border: 1px solid transparent;
+    z-index: 1;
+    background: linear-gradient(to top,rgb(0,0,0,0.15),rgb(255,255,255,0.15));
+    border-radius: 12px;
+    backdrop-filter: blur(100px);
+}
+/*SECTION INPUT*/
+.input {
+    position: relative;
+}
+
+#input-city {
+    width: 85%;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background: rgb(0,0,0,0.15);
+    outline: none;
+    transition: 0.25s border;
+    font-size: 17px;
+    
+}
+#input-city:focus {
+    border: 3px solid white;
+}
+#input-city::placeholder {
+    color: white;
+}
+
+#search-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    padding-right: 5px;
+    color: white;
+}
+/*SECTION INPUT ENDS*/
+
+/*SECTION LOCATION AND DATE INFO*/
+.city-date-container {
+    margin-top: 15px;
+}
+
+#location {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+#city-name {
+    font-size: 18px;
+}
+
+#date {
+    font-weight: normal;
+    margin-top: 10px;
+    padding: 4px;
+}
+/*SECTION LOCATION AND DATE INFO ENDS*/
+
+/*SECTION CURRENT WEATHER*/
+.current-weather-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.weather-item {
+    width: 120px;
+    height: 150px;
+    background: rgb(54, 69, 79, 0.7);
+    display: flex;
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.item-heading {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+#temp-item-value, #cond-item-value, #humidity-item-value, #wind-item-value {
+    font-weight: bolder;
+    font-size: 13px;
+}
+/*SECTION CURRENT WEATHER ENDS*/
+
+/*SECTION SAVED CITIES*/
+#saved-cities-container {
+    position: absolute;
+    top: 60px; 
+    left: 10px; 
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    z-index: 100;
+}
+
+#saved-cities-container.hidden {
+    display: none;
+}
+
+#saved-cities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#saved-cities-header h4 {
+    margin: 0;
+    color: black;
+}
+
+#saved-cities-header button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+#saved-cities-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#saved-cities-list li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    color: black;
+}
+
+#saved-cities-list li:hover {
+    background-color: #f0f0f0;
+}
+/*SECTION SAVED CITIES ENDS*/

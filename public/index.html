@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <!-- main container -->
+    <div class="container">
+        <!-- city input textbox and search button -->
+        <header class="input">
+            <input id="input-city" type="text" placeholder="Search City">
+            <button id="search-btn">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+        </header>
+        
+        <!-- city location and date container -->
+        <div class="city-date-container">
+            <div class="location-date">
+                <div id="location">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <h4 id="city-name">City Name</h4>
+                </div>
+                <h4 id="date"></h4>
+            </div>
+        </div>
+
+        <!-- temperature and weather conditions container -->
+        <div class="current-weather-info">
+            <div class="weather-item">
+                <div class="item-info"> 
+                    <span class="material-symbols-outlined">
+                        sunny
+                    </span>
+                    <h5 class="item-heading">Temperature</h5>
+                    <h5 id="temp-item-value">-- °C</h5>
+                </div>  
+            </div>
+            <div class="weather-item">
+                <div class="item-info" style="padding: 29px;"> 
+                    <span class="material-symbols-outlined">
+                        cloud
+                    </span>
+                    <h5 class="item-heading">Weather</h5>
+                    <h5 id="cond-item-value">--</h5>
+                </div>  
+            </div>
+        </div>
+
+        <!-- Humidity and wind speed container -->
+        <div class="current-weather-info">
+            <div class="weather-item">
+                <div class="item-info" style="padding: 29px;"> 
+                    <span class="material-symbols-outlined">
+                        humidity_low
+                    </span>
+                    <h5 class="item-heading">Humidity</h5>
+                    <h5 id="humidity-item-value">--%</h5>
+                </div>  
+            </div>
+            <div class="weather-item">
+                <div class="item-info"> 
+                    <span class="material-symbols-outlined">
+                        air
+                    </span>
+                    <h5 class="item-heading">Wind Speed</h5>
+                    <h5 id="wind-item-value">--M/s</h5>
+                </div>  
+            </div>
+        </div>
+
+        <!-- saved city list container -->
+        <div id="saved-cities-container" class="hidden">
+            <div id="saved-cities-header">
+                <h4>Saved Cities Info</h4>
+                <button id="close-btn">✖</button>
+            </div>
+            <ul id="saved-cities-list"></ul>
+        </div>
+    </div> 
+
+    <!-- linking javascript file -->
+    <script src="index.js"></script>
+</body>
+</html>
