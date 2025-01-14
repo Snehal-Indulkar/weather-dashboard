@@ -120,7 +120,7 @@ Request Parameters:
 ## Notes About Platform Limitations
 
 1. #### Cold Starts
- - Initial server response may take longer if deployed on platforms like Heroku due to dyno sleep.
+ - Initial server response may take longer if deployed on platforms by shutting down or "sleeping" during inactivity.
 
 2. #### API Rate Limits
 
